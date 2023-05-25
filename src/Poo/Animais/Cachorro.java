@@ -1,4 +1,4 @@
-package Poo;
+package Poo.Animais;
 
 public class Cachorro extends Animal {
 

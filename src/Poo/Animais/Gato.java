@@ -1,6 +1,8 @@
-package Poo;
+package Poo.Animais;
 
-public class Gato extends Animal{
+import Poo.Animais.Animal;
+
+public class Gato extends Animal {
     static int numeroDeGatos;
 
     public Gato(String nome, String cor, int altura, double peso, String estadoDeEspirito) {

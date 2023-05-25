@@ -1,4 +1,6 @@
-package Poo;
+package Poo.Animais;
+
+import Poo.Animais.Animal;
 
 public class Passaro extends Animal {
     static int numeroDePassaros;
