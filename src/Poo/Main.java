@@ -3,15 +3,14 @@ package Poo;
 public class Main {
     public static void main(String[] args) {
 
-        Cachorro cachorro1 =  new Cachorro();
-        Cachorro cachorro2 =  new Cachorro("Rex" ,"Preto", 1, 2.5,"Nada");
-        System.out.println(cachorro2.getNome());
+        Cachorro cachorro1 =  new Cachorro("Pluf", "caramelo", 2, 5.5,"Vai dormi");
+        Gato gato1 = new Gato("Feliz", "Preto", 2, 1.5, "Nada");
+        Passaro passaro1 = new Passaro("Jose","Vermelho",3,3.2, "Nada");
 
-        System.out.println(cachorro1.pegar());
-        System.out.println(cachorro1.interagir("nada"));
-        System.out.println(cachorro1.interagir("Vai dormi"));
-        System.out.println(cachorro1.interagir("Pisar na patinha"));
-        System.out.println(cachorro1.interagir("Carinho"));
+
+    cachorro1.soar();
+    gato1.soar();
+    passaro1.soar();
 
     }
 }
