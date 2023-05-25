@@ -1,12 +1,55 @@
 package Poo;
 
 public class Cachorro {
-    String nome;
-    String cor;
-    int altura;
-    double peso;
-    public String estadoDeEspirito;
 
+    //Atributos
+    private String nome;
+    private String cor;
+    private int altura;
+    private double peso;
+    private String estadoDeEspirito;
+
+    //Construtores
+    public Cachorro(){} //Construtor padrão, valores deault
+    public Cachorro(String nome, String cor, int altura, double peso, String estadoDeEspirito) {
+        this.nome = nome;
+        this.cor = cor;
+        this.altura = altura;
+        this.peso = peso;
+        this.estadoDeEspirito = estadoDeEspirito;
+    }
+
+    //Métodos
+    public String getNome() {
+        return nome;
+    }
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+    public String getCor() {
+        return cor;
+    }
+    public void setCor(String cor) {
+        this.cor = cor;
+    }
+    public int getAltura() {
+        return altura;
+    }
+    public void setAltura(int altura) {
+        this.altura = altura;
+    }
+    public double getPeso() {
+        return peso;
+    }
+    public void setPeso(double peso) {
+        this.peso = peso;
+    }
+    public String getEstadoDeEspirito() {
+        return estadoDeEspirito;
+    }
+    public void setEstadoDeEspirito(String estadoDeEspirito) {
+        this.estadoDeEspirito = estadoDeEspirito;
+    }
     public void comer() {
     }
 
@@ -19,13 +62,12 @@ public class Cachorro {
     }
 
     public String interagir(String acao) {
-        if (acao.equals("carinho")) {
-            this.estadoDeEspirito = "feliz";
-        } else if (acao.equals("Vai dormi")) {
-            this.estadoDeEspirito = "Bravo";
-        } else {
-            this.estadoDeEspirito = "Neutro";
+        switch (acao){
+            case "Carinho" : this.estadoDeEspirito = "Feliz"; break;
+            case "Vai dormi" : this.estadoDeEspirito = "Bravo"; break;
+            case "Pisar na patinha" : this.estadoDeEspirito = "Triste"; break;
+            default: this.estadoDeEspirito = "Neutro";
         }
-        return estadoDeEspirito;
+      return estadoDeEspirito;
     }
 }
